@@ -30,11 +30,25 @@
         </tr>
       </tbody>
     </table>
+    <button id="teste">teste</button>
   </div>
 </template>
 
 <script>
+import api from '../src/services/api.js';
+
+    api.get("item")
+      .then((function(response){
+        console.log(response.data)
+      }))
+      .catch((err) => {
+        console.error("ops! ocorreu um erro" + err);
+    });
+
 export default {
 
+  created() {
+    
+  }
 }
 </script>
