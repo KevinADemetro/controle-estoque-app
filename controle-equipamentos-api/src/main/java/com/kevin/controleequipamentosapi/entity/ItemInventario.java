@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -24,9 +26,11 @@ public class ItemInventario {
 	private String numeroDeSerie;
 	
 	@Column(name = "disponibilidade")
+	@Enumerated(EnumType.STRING)
 	private Disponibilidade disponibilidade;
 	
 	@Column(name = "Status")
+	@Enumerated(EnumType.STRING)
 	private Status status;
 	
 	@Column(name = "descricao")
